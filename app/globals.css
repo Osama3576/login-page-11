@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.bg-grad {
+  background-image: linear-gradient(
+    to bottom left,
+    #172554 0%,
+    #60a5fa 100%
+  );
+}
+
+.submit-button {
+  background-image: linear-gradient(
+    to right,
+    #098da6 0%,
+    #2aa7e1 51%,
+    #098da6 100%
+  );
+  margin: 10px;
+  width: 11rem;
+  padding: 10px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  background-size: 200% auto;
+
+  border-radius: 100px;
+}
+
+.submit-button:hover {
+  background-position: right center; /* change the direction of the change here */
+  transform: scale(1.05);
+}
+
+.bx-shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+/* Add smooth animations for form elements */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px; /* Full rounded */
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #38b6ff;
+  box-shadow: 0 0 8px #38b6ff;
+}
